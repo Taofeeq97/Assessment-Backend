@@ -16,7 +16,37 @@ SECRET_KEY = 'django-insecure-your-secret-key-here-change-in-production'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'assessment-backend-production-98bc.up.railway.app',  # Your Railway backend
+    'ship-qcnbtwtl1-taofeeqs-projects-1d73f7f7.vercel.app',  # Your Vercel frontend
+    'localhost',
+    '127.0.0.1',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:5173",
+    "https://ship-qcnbtwtl1-taofeeqs-projects-1d73f7f7.vercel.app",  # Your Vercel app
+    "https://ship-in.vercel.app",  # Your custom domain (if you set it up)
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://assessment-backend-production-98bc.up.railway.app",
+    "https://ship-qcnbtwtl1-taofeeqs-projects-1d73f7f7.vercel.app",
+    "https://ship-in.vercel.app",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
+
+CORS_ORIGIN_REGEX_WHITELIST = [
+    r"^https://ship-.*\.vercel\.app$",  # Matches all Vercel preview deployments
+    r"^https://.*\.railway\.app$",  # Matches Railway deployments
+]
 
 # Application definition
 INSTALLED_APPS = [
