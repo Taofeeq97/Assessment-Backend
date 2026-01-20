@@ -1,0 +1,159 @@
+# Django migrations - exclude all except __init__.py
+*/migrations/*.py
+!*/migrations/__init__.py
+*/migrations/*.pyc
+
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+.env
+.env.local
+.env.*.local
+
+# Django migrations - exclude all except __init__.py
+*/migrations/*.py
+!*/migrations/__init__.py
+*/migrations/*.pyc
+
+# Also ignore migrations in specific app folders (if you have apps at project root)
+*/app_name/migrations/*.py
+!*/app_name/migrations/__init__.py
+
+# If you want to be more specific about app structure
+# (adjust based on your project structure)
+# myproject/apps/*/migrations/*.py
+# !myproject/apps/*/migrations/__init__.py
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Database backups
+*.dump
+*.backup
+*.bak
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE specific
+*.swp
+*.swo
+*~
